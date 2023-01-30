@@ -278,56 +278,56 @@
             </com.google.android.material.button.MaterialButton>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
+
             <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="7dp"
                 android:id="@+id/dot"
-                android:text="@string/dot"
                 style="@style/mybutton"
-                >
-
-            </com.google.android.material.button.MaterialButton>
-            <com.google.android.material.button.MaterialButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:text="@string/dot">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/zero"
-                android:text="0"
                 style="@style/mybutton"
-                >
-
-            </com.google.android.material.button.MaterialButton>
-            <com.google.android.material.button.MaterialButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:text="0">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/bacscape"
-                android:text="@string/backscape"
                 style="@style/mybutton"
-                >
-
-            </com.google.android.material.button.MaterialButton>
-            <com.google.android.material.button.MaterialButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:id="@+id/equal"
                 android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:text="@string/backscape">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/equal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:backgroundTint="#6A00FF"
                 android:text="@string/ewual"
                 android:textSize="30dp"
-                app:cornerRadius="1000dp"
-                android:backgroundTint="#6A00FF"
-                >
+                app:cornerRadius="1000dp">
 
             </com.google.android.material.button.MaterialButton>
 

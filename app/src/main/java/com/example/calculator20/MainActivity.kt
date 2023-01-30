@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private var isPoint = true
     private var isSimvol = false
+    private var isChanges = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,6 +56,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         eight.setOnClickListener(this)
         nine.setOnClickListener(this)
         zero.setOnClickListener(this)
+
 
         clear.setOnClickListener {
             problem.text = "0"
@@ -85,7 +87,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
         change_plus_minus.setOnClickListener {
-
+           isChanges=true
+            calculate()
         }
         div.setOnClickListener {
             addSimvol("/")
@@ -116,8 +119,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun calculate(): String {
         var list = createArray(problem.text.toString())
+        if (isChanges){
+            change(list)
+        }
         div_multiply(list)
         plus_minus(list)
+
         return list.joinToString()
     }
 
@@ -214,7 +221,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         else if (list[list.size-1]=='-'){
             list[list.size-1]='+'
         }
-        calculate()
         return list
     }
 
