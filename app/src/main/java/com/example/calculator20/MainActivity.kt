@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             problem.text=result.text.toString()
             isPoint=true
             isSimvol=true
+            result.text=""
         }
         backscape.setOnClickListener {
             if (problem.text.length==1){
@@ -209,17 +210,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             isSimvol = false
             isPoint = true
         } else {
-            problem.text = problem.text.dropLast(1).toString() + simvol
+            problem.text = problem.text.dropLast(1).toString()
         }
 
     }
     private fun change(l:MutableList<Any>):MutableList<Any>{
         var list = l
-        if (list[list.size-1]=='+'){
-            list[list.size-1]='-'
+            if (list[list.size - 2] =='+'){
+            list[list.size  - 2]='-'
         }
-        else if (list[list.size-1]=='-'){
-            list[list.size-1]='+'
+        else if (list[list.size-2]=='-'){
+            list[list.size-2]='+'
         }
         return list
     }
